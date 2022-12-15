@@ -19,8 +19,8 @@ function checkRanking() {
     // **********【問題２】ランキングを表示しよう！**********
     var highScore = ncmb.DataStore("GameScore");
     
-    highScore.order(score,true).limit(5).fetchAll()
-        .then(function() {
+    highScore.order("score",true).limit(5).fetchAll()
+        .then(function(results) {
             console.log("検索に成功しました。");
             setData(results);  
         })
